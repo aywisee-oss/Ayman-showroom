@@ -8,7 +8,7 @@ export default function Contact() {
   const { t, ar } = useLang();
 
   const channels = [
-    { icon: Mail, label: t.contact.email, value: 'aywise@gmail.com', href: 'mailto:aywise@gmail.com' },
+    { icon: Mail, label: t.contact.email, value: 'aywisee@gmail.com', href: 'mailto:aywisee@gmail.com' },
     { icon: Phone, label: t.contact.whatsapp, value: '+966 56 335 9181', href: 'https://wa.me/966563359181' },
     { icon: Phone, label: t.contact.call, value: '+966 56 335 9181', href: 'tel:+966563359181' },
   ];
