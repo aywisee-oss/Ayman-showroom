@@ -5,6 +5,7 @@ import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { X } from 'lucide-react';
 import { Reveal } from './Reveal';
 import { useLang } from '@/lib/i18n';
+import StudioProject from './StudioProject';
 import { portfolio } from '@/lib/data';
 
 export default function Portfolio() {
@@ -26,6 +27,8 @@ export default function Portfolio() {
           <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-6xl">{t.portfolioSec.title}</h2>
           <p className="mt-4 max-w-lg text-sm text-ivory/60">{t.portfolioSec.sub}</p>
         </Reveal>
+
+        <StudioProject />
 
         <div className="mt-16 columns-2 gap-4 sm:columns-3 lg:columns-4 [&>*]:mb-4">
           {portfolio.map((img, i) => (
