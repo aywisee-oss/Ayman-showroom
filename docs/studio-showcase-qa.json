@@ -1,0 +1,52 @@
+{
+  "protectedFiles": 30,
+  "protectedFilesIdentical": true,
+  "evidence": [
+    {
+      "width": 360,
+      "result": "PASS",
+      "languages": [
+        "en",
+        "ar"
+      ],
+      "galleryImages": 19,
+      "lightbox": "PASS",
+      "links": "PASS",
+      "caseStudy": "PASS",
+      "overflow": "none",
+      "pageErrors": []
+    },
+    {
+      "width": 390,
+      "result": "PASS",
+      "languages": [
+        "en",
+        "ar"
+      ],
+      "galleryImages": 19,
+      "lightbox": "PASS",
+      "links": "PASS",
+      "caseStudy": "PASS",
+      "overflow": "none",
+      "pageErrors": []
+    },
+    {
+      "width": 1440,
+      "result": "PASS",
+      "languages": [
+        "en",
+        "ar"
+      ],
+      "galleryImages": 19,
+      "lightbox": "PASS",
+      "links": "PASS",
+      "caseStudy": "PASS",
+      "overflow": "none",
+      "pageErrors": []
+    }
+  ],
+  "limitations": [
+    "Chromium emulation, not physical phones or Safari",
+    "No hosted preview test yet"
+  ]
+}
