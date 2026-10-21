@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مجلة أيمن الحسّام</title>
+<meta name="description" content="مجلة أعمال إبداعية تفاعلية لأيمن الحسّام: تصميم إعلاني، هوية بصرية، شعارات خطّية، إنفوجرافيك وتسويق رقمي.">
+<meta name="theme-color" content="#0c120f">
+<meta property="og:title" content="مجلة أيمن الحسّام — معرض الأعمال الإبداعي">
+<meta property="og:description" content="مجلة تفاعلية تتقلب صفحاتها من اليمين إلى اليسار.">
+<meta property="og:image" content="assets/images/a-hero.webp">
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="css/magazine.css">
+</head>
+<body>
+<div class="app" dir="rtl" lang="ar">
+  <header class="bar">
+    <div class="brand"><b>أيمن الحسّام</b><span id="secLabel">معرض الأعمال الإبداعي</span></div>
+    <div class="tools">
+      <button class="tbtn" id="tocBtn" aria-expanded="false" aria-controls="tocPop"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16M4 12h16M4 18h10"/></svg>الفهرس</button>
+      <button class="tbtn" id="fsBtn" title="ملء الشاشة" aria-label="ملء الشاشة"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+    </div>
+  </header>
+  <div class="toc-pop" id="tocPop" hidden></div>
+  <main class="stage" id="stage" aria-live="polite"></main>
+  <footer class="foot">
+    <button class="nav" id="prevBtn" aria-label="الصفحة السابقة"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
+    <div class="meter"><output id="pageOut">الغلاف</output><div class="track"><i id="trackBar"></i></div></div>
+    <button class="nav" id="nextBtn" aria-label="الصفحة التالية"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg></button>
+  </footer>
+</div>
+
+<!-- ======================= PAGES (source) ======================= -->
+<div id="pages">
+
+  <!-- 0 · Cover -->
+  <section class="pg green cover-pg" data-kind="cover" data-nofolio>
+    <div class="frame"></div>
+    <div class="top"><span>معرض الأعمال الإبداعي</span><span>أكتوبر ٢٠٢٦</span></div>
+    <div class="arch"><img src="assets/images/a-hero.webp" alt="عطر AYWISE في مشهد طبيعي"></div>
+    <div class="name">
+      <h1>أيمن الحسّام</h1>
+      <span class="latin">AYMAN AL HUSSAM</span>
+      <span class="sub">تصميم إعلاني · هوية بصرية · تسويق رقمي</span>
+    </div>
+    <div class="coverlines">
+      <div><b class="latin" style="text-align:right">COCOONZ</b>مشاهد إعلانية سينمائية</div>
+      <div><b class="latin" style="text-align:right">AYWISE</b>هوية عطر تصوّرية</div>
+      <div><b>ستّ هويات</b>شعارات خطّية عربية</div>
+    </div>
+  </section>
+
+  <!-- 1 · Contents -->
+  <section class="pg paper" data-label="الفهرس">
+    <div class="pad">
+      <span class="kick">في هذا العدد</span>
+      <h2 class="h1">الفهرس</h2>
+      <div class="toc-list" id="tocList"></div>
+      <p class="note" style="border-top:0">اضغط أي عمل لتكبيره، واسحب زاوية الصفحة أو استخدم الأسهم للتقليب.</p>
+    </div>
+  </section>
+
+  <!-- 2 · Editorial -->
+  <section class="pg paper" data-sec="personal" data-title="التعريف الشخصي" data-desc="الافتتاحية، النبذة، ورحلة الطموح" data-label="الافتتاحية">
+    <div class="pad">
+      <span class="kick">افتتاحية</span>
+      <p class="quote">لم أصل بعد…<br>لكنني لم أتوقف</p>
+      <div class="gold-rule"></div>
+      <p class="lede">أيمن الحسّام — حيث يلتقي الشغف بالحرفة.</p>
+      <p>من الرياض، أبني مساري خطوة بخطوة بين التصميم والتسويق وإدارة الأعمال؛ من مشهد إعلاني لمرتبة تتنفس الطبيعة، إلى هوية عطر يحكي ذاكرة الغابة، إلى ستّ شعارات خطّية وُلدت من الحرف العربي.</p>
+      <p style="margin-top:2.5cqw">كل مشروع محطة، وكل تصميم شهادة على أن التعلّم المستمر هو أثمن مهارة.</p>
+      <span class="sign">أيمن الحسّام · الرياض</span>
+    </div>
+  </section>
+
+  <!-- 3 -->
+  <section class="pg art framed" data-label="التعريف الشخصي">
+    <figure><img data-zoom src="assets/images/p-brief.webp" alt="نبذة بصرية شخصية" data-cap="نبذة بصرية شخصية" data-sec-name="٠١ · التعريف الشخصي"></figure>
+    <div class="cap"><div class="t"><small>٠١ · التعريف الشخصي</small><b>نبذة بصرية شخصية</b></div><button class="zbtn" aria-label="تكبير"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5M11 8v6M8 11h6"/></svg></button></div>
+  </section>
+
+  <!-- 4 · Bio -->
+  <section class="pg paper" data-label="التعريف الشخصي">
+    <div class="pad">
+      <span class="kick">٠١ — التعريف الشخصي</span>
+      <h2 class="h2">النبذة</h2>
+      <p style="margin-top:3cqw">شاب يمني مقيم في الرياض، يجمع بين العمل والدراسة، ويسعى لصناعة مستقبل أفضل من خلال التعلّم والتجربة والتطوير المستمر.</p>
+      <div class="rule"></div>
+      <h3 class="h3">مجالات الخبرة</h3>
+      <ul class="list">
+        <li>التصميم الجرافيكي والإعلانات البصرية</li>
+        <li>التسويق الرقمي وإدارة المتاجر الإلكترونية</li>
+        <li>الهوية البصرية وتصميم الشعارات</li>
+        <li>كتابة المحتوى التسويقي وتحسين محركات البحث</li>
+        <li>إعلانات Google Ads وإدارة الحملات</li>
+      </ul>
+      <div class="rule"></div>
+      <h3 class="h3">التعليم</h3>
+      <p class="small">بكالوريوس إدارة الأعمال — University of the People، موازنةً بين الدراسة والعمل.</p>
+      <div class="rule"></div>
+      <h3 class="h3">ما يميزني</h3>
+      <div class="chips"><span>الفضول</span><span>التجربة</span><span>الاستمرار</span><span>الطموح</span></div>
+    </div>
+  </section>
+
+  <!-- 5 -->
+  <section class="pg art framed" data-label="التعريف الشخصي">
+    <figure><img data-zoom src="assets/images/p-journey.webp" alt="رحلة النمو والنجاح" data-cap="رحلتي نحو التطور والنجاح" data-sec-name="٠١ · التعريف الشخصي"></figure>
+    <div class="cap"><div class="t"><small>٠١ · التعريف الشخصي</small><b>رحلتي نحو التطور والنجاح</b></div><button class="zbtn" aria-label="تكبير"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5M11 8v6M8 11h6"/></svg></button></div>
+  </section>
+
+  <!-- 6 -->
+  <section class="pg art framed" data-label="التعريف الشخصي">
+    <figure><img data-zoom src="assets/images/p-ambition.webp" alt="الطموح المستمر — قصة شخصية" data-cap="الطموح المستمر — قصة شخصية" data-sec-name="٠١ · التعريف الشخصي"></figure>
+    <div class="cap"><div class="t"><small>٠١ · التعريف الشخصي</small><b>الطموح المستمر — قصة شخصية</b></div><button class="zbtn" aria-label="تكبير"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5M11 8v6M8 11h6"/></svg></button></div>
+  </section>
+
+  <!-- 7 · COCOONZ opener -->
+  <section class="pg warm" data-sec="cocoonz" data-title="COCOONZ" data-desc="مفهوم إعلاني مستقل: Bamboo وOxygen" data-label="COCOONZ">
+    <div class="pad">
+      <span class="kick">٠٢ — مفهوم إعلاني مستقل</span>
+      <h2 class="big-latin latin">COCOONZ</h2>
+      <span class="tag-latin latin" style="text-align:right">YOUR COMFORT IS HERE</span>
+      <h3 class="h2" style="margin-top:4cqw">راحة تفوق التوقعات</h3>
+      <p style="margin-top:2.5cqw">تحويل المرتبة إلى بطلة مشهد طبيعي سينمائي: شلالات، وغابات بامبو، وواحات أكسجين فوق الغيوم، لربط راحة النوم بالقوة الطبيعية.</p>
+      <div class="rule" style="margin-block:3.5cqw"></div>
+      <div class="heads">
+        <q>مرتبة بامبو — قوة طبيعية لنوم أعمق</q>
+        <q>قوة طبيعية تحتضن الراحة</q>
+        <q>تنفّس عمق الراحة</q>
+      </div>
+      <div class="rule" style="margin-block:3.5cqw"></div>
+      <div class="feat"><div>مادة طبيعية صديقة للبيئة</div><div>دعم قوي للعمود الفقري</div><div>تهوية مثالية</div><div>توازن درجة الحرارة</div></div>
+      <p class="note soft">اتجاه فني · دمج صور · نصوص تسويقية عربية. عمل إبداعي مستقل بمساعدة الذكاء الاصطناعي، وليس حملة صادرة عن العلامة.</p>
+    </div>
+  </section>
+
+  <!-- 8,9,10 -->
+  <section class="pg art" data-label="COCOONZ">
+    <figure><img data-zoom src="assets/images/c-bamboo-nature.webp" alt="إعلان مرتبة Bamboo" data-cap="مرتبة بامبو — قوة طبيعية لنوم أعمق" data-sec-name="٠٢ · COCOONZ"></figure>
+    <div class="cap"><div class="t"><small>٠٢ · COCOONZ · Bamboo</small><b>قوة طبيعية لنوم أعمق</b></div><button class="zbtn" aria-label="تكبير"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5M11 8v6M8 11h6"/></svg></button></div>
+  </section>
+  <section class="pg art" data-label="COCOONZ">
+    <figure><img data-zoom src="assets/images/c-bamboo-power.webp" alt="إعلان Bamboo — القوة الطبيعية" data-cap="قوة طبيعية تحتضن الراحة" data-sec-name="٠٢ · COCOONZ"></figure>
+    <div class="cap"><div class="t"><small>٠٢ · COCOONZ · Bamboo</small><b>قوة طبيعية تحتضن الراحة</b></div><button class="zbtn" aria-label="تكبير"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5M11 8v6M8 11h6"/></svg></button></div>
+  </section>
+  <section class="pg art" data-label="COCOONZ">
+    <figure><img data-zoom src="assets/images/c-oxygen.webp" alt="إعلان Oxygen — فوق السحاب" data-cap="Oxygen — تنفّس عمق الراحة" data-sec-name="٠٢ · COCOONZ"></figure>
+    <div class="cap"><div class="t"><small>٠٢ · COCOONZ · Oxygen</small><b>تنفّس عمق الراحة</b></div><button class="zbtn" aria-label="تكبير"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5M11 8v6M8 11h6"/></svg></button></div>
+  </section>
+
+  <!-- 11 · AYWISE opener -->
+  <section class="pg green" data-sec="aywise" data-title="AYWISE" data-desc="هوية عطر تصوّرية: الإعلان، العبوة، المكونات" data-label="AYWISE">
+    <div class="pad">
+      <span class="kick">٠٣ — علامة عطر تصوّرية</span>
+      <h2 class="big-latin latin" style="letter-spacing:.16em">AYWISE</h2>
+      <span class="tag-latin latin" style="text-align:right">A HIGHER SENSE OF YOU</span>
+      <h3 class="h2" style="margin-top:4cqw">حاسة أعلى منك</h3>
+      <p style="margin-top:2.5cqw">هوية عطر فاخر: مونوغرام خطّي بروح النار والدخان، وقارورة زجاجية داكنة بغطاء رخامي أسود ولمسات ذهبية، داخل مشاهد غروب وماء وصخور وأقواس حجرية.</p>
+      <div class="rule" style="margin-block:3.5cqw"></div>
+      <div class="swatches">
+        <div class="sw"><i style="background:#1f3a2b"></i><span class="latin">FOREST GREEN</span>أخضر غابي</div>
+        <div class="sw"><i style="background:#a8834d"></i><span class="latin">SMOKED GOLD</span>ذهبي مدخّن</div>
+        <div class="sw"><i style="background:#efe8d8"></i><span class="latin">IVORY</span>عاجي</div>
+      </div>
+      <div class="notes-row latin" style="margin-top:4cqw"><span>BERGAMOT</span><span>CEDARWOOD</span><span>AMBER</span><span>MUSK</span></div>
+      <p class="small" style="margin-top:2.5cqw">من الطبيعة… إلى الذاكرة… إليك</p>
+      <p class="note soft">هوية بصرية · اتجاه فني · تصميم عبوة · حملة إعلانية. علامة خيالية ضمن مشروع تصوّري، وليست منتجًا تجاريًا.</p>
+    </div>
+  </section>
+
+  <!-- 12–15 -->
+  <section class="pg art" data-label="AYWISE">
+    <figure><img data-zoom src="assets/images/a-hero.webp" alt="إعلان عطر AYWISE الرئيسي" data-cap="الإعلان الرئيسي" data-sec-name="٠٣ · AYWISE"></figure>
+    <div class="cap"><div class="t"><small>٠٣ · AYWISE · Eau de Parfum</small><b>الإعلان الرئيسي</b></div><button class="zbtn" aria-label="تكبير"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5M11 8v6M8 11h6"/></svg></button></div>
+  </section>
+  <section class="pg art" data-label="AYWISE">
+    <figure><img data-zoom src="assets/images/a-packaging.webp" alt="تصميم عبوة عطر AYWISE" data-cap="تصميم العبوة" data-sec-name="٠٣ · AYWISE"></figure>
+    <div class="cap"><div class="t"><small>٠٣ · AYWISE</small><b>تصميم العبوة</b></div><button class="zbtn" aria-label="تكبير"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5M11 8v6M8 11h6"/></svg></button></div>
+  </section>
+  <section class="pg art" data-label="AYWISE">
+    <figure><img data-zoom src="assets/images/a-notes.webp" alt="الطابع العطري والمكونات" data-cap="الطابع العطري والمكونات" data-sec-name="٠٣ · AYWISE"></figure>
+    <div class="cap"><div class="t"><small>٠٣ · AYWISE · برغموت، أرز، عنبر، مسك</small><b>الطابع العطري والمكونات</b></div><button class="zbtn" aria-label="تكبير"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5M11 8v6M8 11h6"/></svg></button></div>
+  </section>
+  <section class="pg art" data-label="AYWISE">
+    <figure><img data-zoom src="assets/images/a-board.webp" alt="لوحة عرض الشعار والحملة" data-cap="عرض الشعار والحملة" data-sec-name="٠٣ · AYWISE"></figure>
+    <div class="cap"><div class="t"><small>٠٣ · AYWISE · لوحة المشروع</small><b>عرض الشعار والحملة</b></div><button class="zbtn" aria-label="تكبير"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5M11 8v6M8 11h6"/></svg></button></div>
+  </section>
+
+  <!-- 16 · Logos opener -->
+  <section class="pg night" data-sec="logos" data-title="معرض الشعارات" data-desc="ستّ هويات خطّية عربية" data-label="معرض الشعارات">
+    <div class="pad">
+      <span class="kick">٠٤ — معرض الشعارات</span>
+      <h2 class="h1">ستّ هويات خطّية</h2>
+      <div class="gold-rule"></div>
+      <p>ست هويات عربية أصيلة، كل شعار يجسّد معنى اسمه، وُلد من الحرف العربي وصيغ بروح الخط.</p>
+      <div class="lg-index">
+        <div><b>سند</b><span>استشارات</span><span class="latin">SANAD</span></div>
+        <div><b>رواق</b><span>تصميم داخلي</span><span class="latin">RIWAQ</span></div>
+        <div><b>لُجين</b><span>مجوهرات</span><span class="latin">LUJAIN</span></div>
+        <div><b>سكون</b><span>عافية</span><span class="latin">SUKOON</span></div>
+        <div><b>أفق</b><span>استوديو إبداعي</span><span class="latin">UFUQ</span></div>
+        <div><b>ترياق</b><span>عطور</span><span class="latin">TIRYAQ</span></div>
+      </div>
+      <p class="note soft">خط عربي · تصميم شعارات · هويات بصرية. تُعرض النسخ الأصلية الشفافة بلونها العاجي على خلفية داكنة كما صُمّمت.</p>
+    </div>
+  </section>
+
+  <!-- 17,18 · gallery spread -->
+  <section class="pg night" data-label="معرض الشعارات">
+    <div class="gal">
+      <div class="lg"><img data-zoom data-dark src="assets/images/logo-sanad.png" alt="شعار سند" data-cap="سند — SANAD Consulting" data-sec-name="٠٤ · معرض الشعارات"><div><span class="fld">استشارات</span><b>سند</b><span class="latin">SANAD</span><p>ثبات وسند بخط صاعد.</p></div></div>
+      <div class="lg"><img data-zoom data-dark src="assets/images/logo-riwaq.png" alt="شعار رواق" data-cap="رواق — RIWAQ Interiors" data-sec-name="٠٤ · معرض الشعارات"><div><span class="fld">تصميم داخلي</span><b>رواق</b><span class="latin">RIWAQ</span><p>قوس معماري بروح الرواق.</p></div></div>
+      <div class="lg"><img data-zoom data-dark src="assets/images/logo-lujain.png" alt="شعار لجين" data-cap="لُجين — LUJAIN Jewelry" data-sec-name="٠٤ · معرض الشعارات"><div><span class="fld">مجوهرات</span><b>لُجين</b><span class="latin">LUJAIN</span><p>قطرة نور بلمعان كالماس.</p></div></div>
+    </div>
+  </section>
+  <section class="pg night" data-label="معرض الشعارات">
+    <div class="gal">
+      <div class="lg"><img data-zoom data-dark src="assets/images/logo-sukoon.png" alt="شعار سكون" data-cap="سكون — SUKOON Wellness" data-sec-name="٠٤ · معرض الشعارات"><div><span class="fld">عافية</span><b>سكون</b><span class="latin">SUKOON</span><p>انسياب هادئ كالنسمة.</p></div></div>
+      <div class="lg"><img data-zoom data-dark src="assets/images/logo-ufuq.png" alt="شعار أفق" data-cap="أفق — UFUQ Creative Studio" data-sec-name="٠٤ · معرض الشعارات"><div><span class="fld">استوديو إبداعي</span><b>أفق</b><span class="latin">UFUQ</span><p>اتساع نحو الأفق.</p></div></div>
+      <div class="lg"><img data-zoom data-dark src="assets/images/logo-tiryaq.png" alt="شعار ترياق" data-cap="ترياق — TIRYAQ Perfumes" data-sec-name="٠٤ · معرض الشعارات"><div><span class="fld">عطور</span><b>ترياق</b><span class="latin">TIRYAQ</span><p>نار ودخان وشفاء.</p></div></div>
+    </div>
+  </section>
+
+  <!-- 19,20 · ivory showcase spread -->
+  <section class="pg art wide" data-only="mobile" data-label="معرض الشعارات">
+    <span class="hint">اضغط على العمل لعرضه كاملًا وتكبيره</span>
+    <figure><img data-zoom src="assets/images/logos-ivory.webp" alt="مجموعة الشعارات الستة على خلفية عاجية" data-cap="مجموعة الشعارات الستة" data-sec-name="٠٤ · معرض الشعارات"></figure>
+    <div class="cap"><div class="t"><small>٠٤ · معرض الشعارات · The Signature Marks</small><b>مجموعة الشعارات الستة</b></div><button class="zbtn" aria-label="تكبير"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5M11 8v6M8 11h6"/></svg></button></div>
+  </section>
+  <section class="pg art spread half-r" data-only="desktop" data-label="معرض الشعارات">
+    <div class="sp-in"><img data-zoom src="assets/images/logos-ivory.webp" alt="مجموعة الشعارات الستة على خلفية عاجية" data-cap="مجموعة الشعارات الستة" data-sec-name="٠٤ · معرض الشعارات"></div>
+    <div class="cap" style="background:transparent;height:14cqw"><div class="t"><small>٠٤ · معرض الشعارات · The Signature Marks</small><b>مجموعة الشعارات الستة</b></div><button class="zbtn" aria-label="تكبير"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5M11 8v6M8 11h6"/></svg></button></div>
+  </section>
+  <section class="pg art spread half-l" data-only="desktop" data-label="معرض الشعارات">
+    <div class="sp-in"><img data-zoom src="assets/images/logos-ivory.webp" alt="" data-cap="مجموعة الشعارات الستة" data-sec-name="٠٤ · معرض الشعارات"></div>
+  </section>
+
+  <!-- 21 -->
+  <section class="pg art ivoryfill" data-label="معرض الشعارات">
+    <figure><img data-zoom src="assets/images/p-portrait.webp" alt="بورتريه أحادي مع الشعارات" data-cap="عرض الشعارات مع الصورة الشخصية" data-sec-name="٠٤ · معرض الشعارات"></figure>
+    <div class="cap"><div class="t"><small>٠٤ · معرض الشعارات</small><b>عرض الشعارات مع الصورة الشخصية</b></div><button class="zbtn" aria-label="تكبير"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5M11 8v6M8 11h6"/></svg></button></div>
+  </section>
+
+  <!-- 22 · Infographics opener -->
+  <section class="pg paper" data-sec="infographics" data-title="الإنفوجرافيك" data-desc="تطوير الذات وإدارة الأعمال" data-label="الإنفوجرافيك">
+    <div class="pad">
+      <span class="kick">٠٥ — الإنفوجرافيك</span>
+      <h2 class="h1">الإنفوجرافيك</h2>
+      <div class="gold-rule"></div>
+      <p>تحويل المعلومات إلى مسارات بصرية واضحة: تخطيط بصري، وتسلسل للأفكار، وكتابة محتوى عربي.</p>
+      <div class="rule"></div>
+      <h3 class="h3">تطوير الذات — خارطة عملية لبناء نسخة أفضل من نفسك</h3>
+      <p class="small">ابدأ بهدف واضح · ابنِ عادات إيجابية · نظّم وقتك · قسّم الطريق · تعلّم باستمرار · واجه التسويف · انضبط ولا تعتمد على المزاج</p>
+      <p class="quote" style="font-size:5.4cqw;margin-top:2.5cqw">«كل تطور كبير يبدأ بقرار صغير يتكرر كل يوم»</p>
+      <div class="rule"></div>
+      <h3 class="h3">إدارة الأعمال — من الفكرة إلى النمو</h3>
+      <p class="small">التخطيط · التنظيم · القيادة · الرقابة · التفكير الاستراتيجي · إدارة الموارد · اتخاذ القرار وحل المشكلات · النمو وتحقيق الأهداف</p>
+      <p class="quote" style="font-size:5.4cqw;margin-top:2.5cqw">«إدارة الأعمال ليست إدارة مهام فقط؛ بل إدارة رؤية، وقرار، ونمو»</p>
+    </div>
+  </section>
+
+  <!-- 23,24 -->
+  <section class="pg art framed" data-label="الإنفوجرافيك">
+    <figure><img data-zoom src="assets/images/i-self.webp" alt="إنفوجرافيك تطوير الذات" data-cap="تطوير الذات — خارطة عملية" data-sec-name="٠٥ · الإنفوجرافيك"></figure>
+    <div class="cap"><div class="t"><small>٠٥ · الإنفوجرافيك</small><b>تطوير الذات</b></div><button class="zbtn" aria-label="تكبير"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5M11 8v6M8 11h6"/></svg></button></div>
+  </section>
+  <section class="pg art framed" data-label="الإنفوجرافيك">
+    <figure><img data-zoom src="assets/images/i-business.webp" alt="إنفوجرافيك إدارة الأعمال" data-cap="إدارة الأعمال — من الفكرة إلى النمو" data-sec-name="٠٥ · الإنفوجرافيك"></figure>
+    <div class="cap"><div class="t"><small>٠٥ · الإنفوجرافيك</small><b>إدارة الأعمال — من الفكرة إلى النمو</b></div><button class="zbtn" aria-label="تكبير"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5M11 8v6M8 11h6"/></svg></button></div>
+  </section>
+
+  <!-- 25 · Digital marketing opener -->
+  <section class="pg green" data-sec="marketing" data-title="التسويق الرقمي" data-desc="دراستا حالة COCOONZ: الاستراتيجية والمتجر" data-label="التسويق الرقمي">
+    <div class="pad">
+      <span class="kick">٠٦ — التسويق الرقمي</span>
+      <h2 class="h1">تجربة <span class="latin" style="font-weight:500">COCOONZ</span> الرقمية</h2>
+      <div class="gold-rule"></div>
+      <p>دراستان مصوّرتان لحالة التسويق الرقمي وتجربة المتجر الإلكتروني: الاستراتيجية، والقنوات، ورحلة العميل، وخطة محتوى لثلاثين يومًا.</p>
+      <div class="rule"></div>
+      <h3 class="h3">نطاق العمل</h3>
+      <ul class="list">
+        <li>الاستراتيجية والتخطيط</li>
+        <li>الإعلانات الرقمية: Google Ads، Instagram، TikTok، Snapchat</li>
+        <li>إدارة المتجر الإلكتروني</li>
+        <li>تسويق المحتوى وخطة ٣٠ يومًا</li>
+        <li>تحسين محركات البحث والظهور على Google Maps</li>
+        <li>دعم المبيعات وتدريب البائعين</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 26 -->
+  <section class="pg paper" data-label="التسويق الرقمي">
+    <div class="pad">
+      <span class="kick">٠٦ — التسويق الرقمي</span>
+      <h2 class="h2">أعمدة التجربة الرقمية</h2>
+      <div class="facts" style="margin-top:4cqw">
+        <div><b>تصفح أسهل</b><span>وصول أسرع إلى المنتج</span></div>
+        <div><b>مقارنة أوضح</b><span>لاختيار المرتبة الأنسب</span></div>
+        <div><b>عناصر ثقة أقوى</b><span>لتجربة شراء مريحة</span></div>
+        <div><b>متوافق مع الجوال</b><span>في كل خطوة من الرحلة</span></div>
+      </div>
+      <div class="rule"></div>
+      <h3 class="h3">مبادئ العلامة</h3>
+      <div class="chips"><span>الجودة</span><span>الصحة</span><span>التصميم</span><span>الابتكار</span></div>
+      <p class="quote" style="font-size:6cqw;margin-top:5cqw">نوم أعمق لحياة أجمل</p>
+      <span class="latin" style="font-size:3.2cqw;letter-spacing:.12em;color:#8a6a35;text-align:right;display:block;margin-top:1.5cqw">A BETTER SLEEP, A BRIGHTER TOMORROW</span>
+      <p class="note">إستراتيجية تسويق رقمي · SEO · Google Ads · إدارة متجر · كتابة محتوى. عرض خبرة مصوّر، دون أرقام أداء خارج ما ورد في التصاميم.</p>
+    </div>
+  </section>
+
+  <!-- 27,28 · case study -->
+  <section class="pg art wide" data-only="mobile" data-label="التسويق الرقمي">
+    <span class="hint">اضغط على العمل لعرضه كاملًا وتكبيره</span>
+    <figure><img data-zoom src="assets/images/d-case.webp" alt="دراسة حالة التسويق الرقمي لـ COCOONZ" data-cap="دراسة حالة التسويق الرقمي" data-sec-name="٠٦ · التسويق الرقمي"></figure>
+    <div class="cap"><div class="t"><small>٠٦ · التسويق الرقمي · COCOONZ</small><b>دراسة حالة التسويق الرقمي</b></div><button class="zbtn" aria-label="تكبير"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5M11 8v6M8 11h6"/></svg></button></div>
+  </section>
+  <section class="pg art spread half-r" data-only="desktop" data-label="التسويق الرقمي">
+    <div class="sp-in"><img data-zoom src="assets/images/d-case.webp" alt="دراسة حالة التسويق الرقمي لـ COCOONZ" data-cap="دراسة حالة التسويق الرقمي" data-sec-name="٠٦ · التسويق الرقمي"></div>
+    <div class="cap" style="background:transparent;height:14cqw"><div class="t"><small>٠٦ · التسويق الرقمي · COCOONZ</small><b>دراسة حالة التسويق الرقمي</b></div><button class="zbtn" aria-label="تكبير"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5M11 8v6M8 11h6"/></svg></button></div>
+  </section>
+  <section class="pg art spread half-l" data-only="desktop" data-label="التسويق الرقمي">
+    <div class="sp-in"><img data-zoom src="assets/images/d-case.webp" alt="" data-cap="دراسة حالة التسويق الرقمي" data-sec-name="٠٦ · التسويق الرقمي"></div>
+  </section>
+
+  <!-- 29,30 · e-commerce -->
+  <section class="pg art wide" data-only="mobile" data-label="التسويق الرقمي">
+    <span class="hint">اضغط على العمل لعرضه كاملًا وتكبيره</span>
+    <figure><img data-zoom src="assets/images/d-ecom.webp" alt="تجربة المتجر الإلكتروني لـ COCOONZ" data-cap="تجربة التجارة الإلكترونية" data-sec-name="٠٦ · التسويق الرقمي"></figure>
+    <div class="cap"><div class="t"><small>٠٦ · التسويق الرقمي · E-commerce Experience</small><b>تجربة المتجر الإلكتروني</b></div><button class="zbtn" aria-label="تكبير"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5M11 8v6M8 11h6"/></svg></button></div>
+  </section>
+  <section class="pg art spread half-r" data-only="desktop" data-label="التسويق الرقمي">
+    <div class="sp-in"><img data-zoom src="assets/images/d-ecom.webp" alt="تجربة المتجر الإلكتروني لـ COCOONZ" data-cap="تجربة التجارة الإلكترونية" data-sec-name="٠٦ · التسويق الرقمي"></div>
+    <div class="cap" style="background:transparent;height:14cqw"><div class="t"><small>٠٦ · التسويق الرقمي · E-commerce Experience</small><b>تجربة المتجر الإلكتروني</b></div><button class="zbtn" aria-label="تكبير"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5M11 8v6M8 11h6"/></svg></button></div>
+  </section>
+  <section class="pg art spread half-l" data-only="desktop" data-label="التسويق الرقمي">
+    <div class="sp-in"><img data-zoom src="assets/images/d-ecom.webp" alt="" data-cap="تجربة التجارة الإلكترونية" data-sec-name="٠٦ · التسويق الرقمي"></div>
+  </section>
+
+  <!-- 31 · Closing -->
+  <section class="pg paper" data-sec="closing" data-title="الخاتمة والتواصل" data-desc="المهارات، الخبرات، والموقع الشخصي" data-label="الخاتمة">
+    <div class="pad">
+      <span class="kick">٠٧ — الخاتمة</span>
+      <h2 class="h2">المهارات والمسار</h2>
+      <div class="skills" style="margin-top:4cqw">
+        <span class="latin" style="font-family:var(--f-body)">SAP ERP</span><span>Excel</span><span>Excel VBA</span><span>إدارة المخزون</span>
+        <span>التصميم</span><span>Google Ads</span><span>SEO</span><span>الذكاء الاصطناعي</span>
+      </div>
+      <div class="rule"></div>
+      <div class="facts">
+        <div><b>الخبرات العملية</b><span>جوهرة رماح · الفنار للمقاولات · Cocoonz · الرومانسية</span></div>
+        <div><b>رحلتي باختصار</b><span>خدمة العملاء · المبيعات · التسويق · التطوير الذاتي</span></div>
+        <div><b>من محطات الرحلة</b><span>خفض نسبة الهدر من ١٫٨٠٪ إلى ٠٫٨٠٪ خلال ٤ أشهر</span></div>
+        <div><b>التعليم</b><span>بكالوريوس إدارة الأعمال — University of the People</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 32 · Contact -->
+  <section class="pg green" data-label="التواصل">
+    <div class="pad">
+      <span class="kick">٠٧ — التواصل</span>
+      <h2 class="h1">هدفي القادم</h2>
+      <div class="gold-rule"></div>
+      <p style="font-size:4.6cqw">أن أبني مسارًا مهنيًا قويًا، وأحوّل تعلّمي إلى فرص حقيقية.</p>
+      <p class="quote" style="color:var(--ivory);font-size:6.4cqw;margin-top:6cqw">«النجاح رحلة مستمرة تُبنى بالاجتهاد والتعلّم والتطوير»</p>
+      <div class="rule" style="margin-top:6cqw"></div>
+      <span class="kick" style="margin-bottom:2.5cqw">الموقع الشخصي</span>
+      <a class="site" href="https://ayman-showroom.vercel.app" target="_blank" rel="noopener">ayman-showroom.vercel.app ↗</a>
+      <p class="note soft">قيد الإضافة: المشاريع التقنية — AYMAN AI STUDIO، ملفات Excel ولوحات البيانات، وتصاميم PowerPoint.</p>
+    </div>
+  </section>
+
+  <!-- 33 · Back cover -->
+  <section class="pg green back-pg" data-kind="backcover" data-nofolio data-label="الغلاف الخلفي">
+    <div class="frame" style="position:absolute;inset:4cqw;border:.25cqw solid rgba(217,191,143,.45)"></div>
+    <div class="inner">
+      <div class="mini-arch"></div>
+      <q>تعلّم · الطموح · الاستمرار</q>
+      <div style="font:600 6cqw/1 var(--f-display)">أيمن الحسّام</div>
+      <div class="latin" style="font-size:2.8cqw;letter-spacing:.4em;color:var(--gold-hi)">AYMAN AL HUSSAM</div>
+      <div class="latin" style="font-size:3cqw;color:var(--ivory-2);margin-top:3cqw">ayman-showroom.vercel.app</div>
+    </div>
+  </section>
+</div>
+
+<!-- lightbox -->
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="عرض العمل">
+  <div class="lb-top">
+    <div class="lb-cap"><small id="lbSec"></small><b id="lbTitle"></b></div>
+    <button class="tbtn" id="lbClose" aria-label="إغلاق"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>إغلاق</button>
+  </div>
+  <div class="lb-view" id="lbView"><img id="lbImg" alt="" draggable="false"></div>
+  <div class="lb-bot">
+    <button class="nav" id="lbPrev" aria-label="العمل السابق"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
+    <button class="nav" id="lbOut" aria-label="تصغير"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 12h12"/></svg></button>
+    <span class="cnt" id="lbCnt"></span>
+    <button class="nav" id="lbIn" aria-label="تكبير"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 12h12M12 6v12"/></svg></button>
+    <button class="nav" id="lbNext" aria-label="العمل التالي"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg></button>
+  </div>
+</div>
+
+<script src="js/magazine.js"></script>
+</body>
+</html>
