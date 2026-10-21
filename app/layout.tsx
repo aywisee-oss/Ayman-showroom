@@ -7,9 +7,19 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const plex = IBM_Plex_Sans_Arabic({ subsets: ['arabic'], weight: ['300', '400', '500', '600', '700'], variable: '--font-plex' });
 
 export const metadata: Metadata = {
-  title: 'Ayman Al Hussam — Luxury Career Showroom',
-  description:
-    'Sales & Marketing · Branch Operations · Business Development. A luxury career showroom presenting the professional journey of Ayman Al Hussam, Riyadh, Saudi Arabia.',
+  metadataBase: new URL('https://ayman-showroom.vercel.app'),
+  title: 'Ayman Al Hussam | أيمن الحسام — Creative Portfolio & Digital Marketing',
+  description: 'الموقع الشخصي لأيمن الحسام — Ayman Al Hussam. معرض أعمال في التصميم الإبداعي والتسويق الرقمي وتطوير الأعمال في الرياض، السعودية.',
+  alternates: { canonical: '/' },
+  openGraph: {
+    type: 'website',
+    url: 'https://ayman-showroom.vercel.app',
+    title: 'Ayman Al Hussam | أيمن الحسام',
+    description: 'Creative portfolio, digital marketing and business development | معرض أعمال أيمن الحسام',
+    siteName: 'Ayman Al Hussam',
+    locale: 'en_US',
+  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
