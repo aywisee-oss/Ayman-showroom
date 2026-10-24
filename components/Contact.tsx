@@ -1,6 +1,7 @@
 'use client';
 
-import { Mail, Phone, Download, ArrowUpRight } from 'lucide-react';
+import { Mail, Phone, ArrowUpRight } from 'lucide-react';
+import CVDownload from './CVDownload';
 import { Reveal } from './Reveal';
 import { useLang } from '@/lib/i18n';
 
@@ -55,14 +56,7 @@ export default function Contact() {
 
         <Reveal delay={120}>
           <div className="mt-10 flex flex-wrap items-center gap-6">
-            <a
-              href="/assets/ayman-cv.docx"
-              download
-              className="inline-flex items-center gap-2 rounded-full bg-ivory px-7 py-3 text-sm font-medium text-charcoal transition-transform duration-300 hover:scale-[1.03]"
-            >
-              <Download size={16} />
-              {t.contact.cv}
-            </a>
+            <CVDownload variant="contact" />
             <div className="flex items-center gap-6">
               <span className="text-xs uppercase tracking-widest text-ivory/40">{t.contact.links}</span>
               {links.map((l) => (

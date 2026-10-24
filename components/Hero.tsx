@@ -1,7 +1,8 @@
 'use client';
 
 import { motion, useReducedMotion } from 'framer-motion';
-import { ArrowDown, Download } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
+import CVDownload from './CVDownload';
 import { useLang } from '@/lib/i18n';
 
 export default function Hero() {
@@ -83,14 +84,7 @@ export default function Hero() {
             {t.hero.explore}
             <ArrowDown size={16} className="transition-transform duration-300 group-hover:translate-y-0.5" />
           </button>
-          <a
-            href="/assets/ayman-cv.docx"
-            download
-            className="inline-flex items-center gap-2 rounded-full border border-ivory/50 px-7 py-3 text-sm font-medium text-ivory transition-colors duration-300 hover:bg-ivory hover:text-charcoal"
-          >
-            <Download size={16} />
-            {t.hero.download}
-          </a>
+          <CVDownload variant="hero" />
         </motion.div>
       </div>
 
