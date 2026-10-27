@@ -12,12 +12,12 @@ type Variant = 'hero' | 'contact';
 
 const CV_FILES: Record<CvLanguage, Record<CvFormat, string>> = {
   ar: {
-    pdf: '/cv/Ayman_Al_Hussam_Professional_CV_AR.pdf',
-    docx: '/cv/Ayman_Al_Hussam_Professional_CV_AR.docx',
+    pdf: '/cv/Ayman_Al_Hussam_Sales_CV_AR.pdf',
+    docx: '/cv/Ayman_Al_Hussam_Sales_CV_AR.docx',
   },
   en: {
-    pdf: '/cv/Ayman_Al_Hussam_Professional_CV_EN.pdf',
-    docx: '/cv/Ayman_Al_Hussam_Professional_CV_EN.docx',
+    pdf: '/cv/Ayman_Al_Hussam_Sales_CV_EN.pdf',
+    docx: '/cv/Ayman_Al_Hussam_Sales_CV_EN.docx',
   },
 };
 
